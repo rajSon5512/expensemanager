@@ -36,20 +36,22 @@ class MyAppState extends StatelessWidget {
       appBar: AppBar(
         title: Text('Flutter App'),
       ),
-      body:Column(
-        //mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Container(
-            width: double.infinity,
-            child: Card(
-              child: Text('First Card',style: TextStyle(fontSize: 32),),
-              color: Colors.blue,
-              elevation: 5,
+      body: SingleChildScrollView(
+        child: Column(
+          //mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              width: double.infinity,
+              child: Card(
+                child: Text('First Card',style: TextStyle(fontSize: 32),),
+                color: Colors.blue,
+                elevation: 5,
+              ),
             ),
-          ),
-          UserTransaction()
-        ],
+            UserTransaction()
+          ],
+        ),
       )
     );
   }
